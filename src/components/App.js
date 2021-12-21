@@ -1,8 +1,9 @@
 import React, {useState} from "react";
 import AppRouter from './Router';
-import firebase from "../firebase"
+import {authService} from "../firebase"
 
 function App() {
+  console.log(authService.currentUser);
   const [isLoggedIn, setIsLiggedIn] = useState(false);
   return (
     <>
