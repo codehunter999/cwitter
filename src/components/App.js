@@ -4,7 +4,7 @@ import {authService} from "../firebase"
 
 function App() {
   console.log(authService.currentUser);
-  const [isLoggedIn, setIsLiggedIn] = useState(false);
+  const [isLoggedIn, setIsLiggedIn] = useState(authService.currentUser);
   return (
     <>
       <AppRouter isLoggedIn={isLoggedIn} />
